@@ -12,7 +12,7 @@ const MovieCard = ({ movie }) => {
                      `${process.env.REACT_APP_BANNER}${movie.poster_path}` +
                      ")"
              }}>
-            <div className="overlay">
+            <div className="overlay p-3">
                 <h1>{ movie.title }</h1>
                 { movie.genre_ids.map((id) => (
                     <Badge bg="danger">{ id }</Badge>
