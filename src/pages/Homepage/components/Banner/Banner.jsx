@@ -20,7 +20,7 @@ const Banner = () => {
       style={{
         backgroundImage:
             "url(" +
-            `https://media.themoviedb.org/t/p/w1066_and_h600_bestv2${data?.results[1].poster_path}` +
+            `${process.env.REACT_APP_BANNER}${data?.results[1].poster_path}` +
             ")"
   }}>
     <div className="text-white banner-text-area">
