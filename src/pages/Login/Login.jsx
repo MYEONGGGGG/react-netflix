@@ -1,5 +1,6 @@
 import React from "react";
 import { Button, Container, Form } from "react-bootstrap";
+import "./Login.style.css";
 
 const Login = () => {
 
@@ -16,11 +17,13 @@ const Login = () => {
                 <p className="text-white">어디서나 자유롭게 시청하세요. 해지는 언제든 가능합니다.</p>
 
                 <div>
-                    <h3 className="text-white">시청할 준비가 되셨나요? 멤버십을 등록하거나 재시작하려면 이메일 주소를 입력하세요.</h3>
+                    <h3 className="text-white">
+                        시청할 준비가 되셨나요? 멤버십을 등록하거나 재시작하려면 이메일 주소를 입력하세요.
+                    </h3>
                     <div>
                         <Form onSubmit={btnLoginClick}>
-                            <Form.Group className="mb-3" controlId="formBasicEmail">
-                                <Form.Control type="email" placeholder="이메일 주소"/>
+                            <Form.Group className="mb-3 d-flex justify-content-center align-items-center" controlId="formBasicEmail">
+                                <Form.Control type="email" placeholder="이메일 주소" className="me-2 w-50"/>
                                 <Button className="btn-danger" type="submit">
                                     시작하기 >
                                 </Button>

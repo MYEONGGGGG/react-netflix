@@ -10,14 +10,11 @@ import NotFoundPage from "./pages/NotFoundpage/NotFoundPage";
 
 function App() {
   return (
-    <div className="App">
       <Routes>
           <Route path="/" element={ <AppLayout/> }>
               <Route index element={<Homepage/>} />
               <Route path="/login" element={<Login/>} />
 
-              {/*<Route path="/movies" element={<MoviePage/>} />*/}
-              {/*<Route path="/movies/:id" element={<MovieDetailPage/>} />*/}
               <Route path="movies">
                   <Route index element={<MoviePage/>} />
                   <Route path=":id" element={<MovieDetailPage/>} />
@@ -26,7 +23,6 @@ function App() {
               <Route path="*" element={<NotFoundPage/>} />
           </Route>
       </Routes>
-    </div>
   );
 }
 
