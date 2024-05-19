@@ -1,13 +1,13 @@
 import React from "react";
-import { usePopularMoviesQuery } from "../../../../hooks/usePopularMovies";
+import { usePopularTvQuery } from "../../../../hooks/usePopularTv";
 import { Alert } from "react-bootstrap";
 import "react-multi-carousel/lib/styles.css";
 import MovieSlider from "../../../../common/MovieSlider/MovieSlider";
 import { responsive } from "../../../../constants/responsive";
 
-const PopularMovieSlide = () => {
+const PopularTvSlide = () => {
 
-    const { data, isLoading, isError, error } = usePopularMoviesQuery();
+    const { data, isLoading, isError, error } = usePopularTvQuery();
 
     if (isLoading) {
         return <h1>Loading...</h1>
@@ -20,11 +20,11 @@ const PopularMovieSlide = () => {
     return (
         <div>
             <MovieSlider
-                title="지금 주목받는 영화"
+                title="TV 드라마"
                 movies={ data.results }
                 responsive={ responsive } />
         </div>
     );
 };
 
-export default PopularMovieSlide;
+export default PopularTvSlide;

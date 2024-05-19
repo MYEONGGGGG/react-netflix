@@ -1,6 +1,6 @@
 import React from "react";
 import { Badge } from "react-bootstrap";
-import "../MovieCard/MovieCard.style.css";
+import "./MovieCard.style.css";
 
 const MovieCard = ({ movie }) => {
 
@@ -13,7 +13,7 @@ const MovieCard = ({ movie }) => {
                      ")"
              }}>
             <div className="overlay p-3">
-                <h1>{ movie.title }</h1>
+                <h3>{ movie.title }</h3>
                 { movie.genre_ids.map((id) => (
                     <Badge bg="danger">{ id }</Badge>
                 )) }
