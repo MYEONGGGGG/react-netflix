@@ -1,12 +1,20 @@
 .carousel-container {
-    overflow: hidden;
-    height: 430px;
+    overflow-x: hidden;
+    overflow-y: visible;
+    height: 500px;
 }
 
+.sliderClass {
+    height: 90%;
+}
 @media (max-width: 480px) {
     .carousel-container {
-        height: 330px;
+        height: 290px;
         display: flex;
+        overflow-y: hidden;
         justify-content: space-between;
+    }
+    .sliderClass {
+        height: 100%;
     }
 }
