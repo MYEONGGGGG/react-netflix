@@ -7,6 +7,7 @@
 .sliderClass {
     height: 90%;
 }
+
 @media (max-width: 480px) {
     .carousel-container {
         height: 290px;
